@@ -122,28 +122,39 @@
 // };
 
 // //-------------------
-interface Programador {
-  nombre: string;
-  tecnologias: string[];
-  experiencia?: number;
-  fachero: boolean | null;
+// interface Programador {
+//   nombre: string;
+//   tecnologias: string[];
+//   experiencia?: number;
+//   fachero: boolean | null;
+// }
+
+// let dev: Programador = {
+//   nombre: "Mauricio",
+//   tecnologias: ["HTML", "CSS", "JAVASCRIPT", "REACT JS", "NODEJS"],
+//   experiencia: 1,
+//   fachero: true,
+// };
+
+// let dev2: Programador = {
+//   nombre: "Alfred",
+//   tecnologias: ["Python"],
+//   fachero: null,
+// };
+
+// function enviarCurriculum(progrador: Programador) {
+//   console.log(`Este Cv es de ${progrador.nombre}`);
+// }
+
+// enviarCurriculum(dev);
+
+// //-------------------
+class Pelicula {
+  nombre?: string;
+  protagonistas?: string[];
+  actores?: string[];
+
+  proyectarEnCine() {
+    console.log(`${this.nombre} esta siendo proeyectada`);
+  }
 }
-
-let dev: Programador = {
-  nombre: "Mauricio",
-  tecnologias: ["HTML", "CSS", "JAVASCRIPT", "REACT JS", "NODEJS"],
-  experiencia: 1,
-  fachero: true,
-};
-
-let dev2: Programador = {
-  nombre: "Alfred",
-  tecnologias: ["Python"],
-  fachero: null,
-};
-
-function enviarCurriculum(progrador: Programador) {
-  console.log(`Este Cv es de ${progrador.nombre}`);
-}
-
-enviarCurriculum(dev);
