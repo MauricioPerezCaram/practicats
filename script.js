@@ -113,8 +113,45 @@
 // }
 // enviarCurriculum(dev);
 // //-------------------
-class Pelicula {
-    proyectarEnCine() {
-        console.log(`${this.nombre} esta siendo proeyectada`);
+// class Pelicula {
+//   nombre?: string;
+//   protagonistas: string[] = [];
+//   exitosa?: boolean;
+//   proyectarPelicula() {
+//     console.log(`La pelicula ${this.nombre} esta siendo proyectada`);
+//   }
+//   constructor(nombre: string, protagonistas: string[], exitosa: boolean) {
+//     this.nombre = nombre;
+//     this.protagonistas = protagonistas;
+//     this.exitosa = exitosa;
+//   }
+// }
+// const pelicula = new Pelicula(
+//   "Transformers",
+//   ["Megan Fox", "Optimus Prime"],
+//   true
+// );
+// const pelicula2 = new Pelicula("Barbie", ["Barbi", "Ken"], true);
+// pelicula.proyectarPelicula();
+// console.log(pelicula2);
+// //-------------------
+class Sorteo {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+    setTicket(ticket) {
+        this.ticket = ticket;
+    }
+    getticket() {
+        return this.ticket;
+    }
+    sortear() {
+        return `Para ${this.nombre} el ticket es ${this.ticket}`;
     }
 }
+let sorteo = new Sorteo("Mauri");
+sorteo.setTicket(7);
+console.log(sorteo.sortear());
+let sorteo2 = new Sorteo("Mauri 2");
+sorteo2.setTicket("A7");
+console.log(sorteo2.sortear());

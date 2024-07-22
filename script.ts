@@ -149,12 +149,55 @@
 // enviarCurriculum(dev);
 
 // //-------------------
-class Pelicula {
-  nombre?: string;
-  protagonistas?: string[];
-  actores?: string[];
+// class Pelicula {
+//   nombre?: string;
+//   protagonistas: string[] = [];
+//   exitosa?: boolean;
 
-  proyectarEnCine() {
-    console.log(`${this.nombre} esta siendo proeyectada`);
+//   proyectarPelicula() {
+//     console.log(`La pelicula ${this.nombre} esta siendo proyectada`);
+//   }
+
+//   constructor(nombre: string, protagonistas: string[], exitosa: boolean) {
+//     this.nombre = nombre;
+//     this.protagonistas = protagonistas;
+//     this.exitosa = exitosa;
+//   }
+// }
+
+// const pelicula = new Pelicula(
+//   "Transformers",
+//   ["Megan Fox", "Optimus Prime"],
+//   true
+// );
+// const pelicula2 = new Pelicula("Barbie", ["Barbi", "Ken"], true);
+
+// pelicula.proyectarPelicula();
+// console.log(pelicula2);
+
+// //-------------------
+class Sorteo<T> {
+  private ticket?: T;
+
+  constructor(private nombre: string) {}
+
+  setTicket(ticket: T) {
+    this.ticket = ticket;
+  }
+
+  getticket() {
+    return this.ticket;
+  }
+
+  public sortear(): string {
+    return `Para ${this.nombre} el ticket es ${this.ticket}`;
   }
 }
+
+let sorteo = new Sorteo<number>("Mauri");
+sorteo.setTicket(7);
+console.log(sorteo.sortear());
+
+let sorteo2 = new Sorteo<string>("Mauri 2");
+sorteo2.setTicket("A7");
+console.log(sorteo2.sortear());
